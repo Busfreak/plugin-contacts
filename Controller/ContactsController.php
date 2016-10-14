@@ -64,7 +64,7 @@ class ContactsController extends BaseController {
      */
     public function details()
     {
-        $this->response->html($this->helper->layout->project('contacts:contact/details', array(
+        $this->response->html($this->helper->layout->app('contacts:contact/details', array(
             'title' => t('Contacts'),
             'contact' => $this->contactsModel->getByIDWithHeader($this->request->getIntegerParam('contacts_id'))
         )));
