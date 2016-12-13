@@ -20,7 +20,7 @@
         <td><?= (empty($values[2]))?"":$values[2]['value'] ?></td>
         <td><?= (empty($values[3]))?"":$values[3]['value'] ?></td>
         <td>
-            <?php if (count($values) > 3): ?>
+            <?php if (!empty($values[4])): ?>
                 <?= $this->url->link(t('additional'), 'ContactsController', 'details', array('plugin' => 'contacts','contacts_id' => $value['contacts_id']), false, 'popover') ?>
             <?php endif ?>
         </td>

@@ -22,7 +22,7 @@
         <td><?= (empty($values[2]))?"":$values[2]['value'] ?></td>
         <td><?= (empty($values[3]))?"":$values[3]['value'] ?></td>
         <td><?= (empty($values[4]))?"":$values[4]['value'] ?></td>
-        <td><?= $this->render('contacts:project/menu', array('project' => $project, 'count' => count($values), 'contacts_id' => $value['contacts_id'])) ?></td>
+        <td><?= $this->render('contacts:project/menu', array('project' => $project, 'more' => !empty($values[5]), 'contacts_id' => $value['contacts_id'])) ?></td>
     </tr>
     <?php endforeach ?>
     </table>
