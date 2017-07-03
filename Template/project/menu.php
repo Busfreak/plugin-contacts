@@ -4,16 +4,16 @@
         <?php if($more): ?>
         <li>
             <i class="fa  fa-book" aria-hidden="true"></i>
-            <?= $this->url->link(t('additional'), 'ContactsController', 'details', array('plugin' => 'contacts', 'project_id' => $project['id'], 'contacts_id' => $contacts_id), false, 'popover') ?>
+            <?= $this->modal->medium('', t('additional'), 'ContactsController', 'details', array('plugin' => 'contacts', 'project_id' => $project['id'], 'contacts_id' => $contacts_id)) ?>
         </li>
         <?php endif ?>
         <li>
             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-            <?= $this->url->link(t('Edit'), 'ContactsController', 'edit', array('plugin' => 'contacts', 'project_id' => $project['id'], 'contacts_id' => $contacts_id), false, 'popover') ?>
+            <?= $this->modal->medium('', t('Edit'), 'ContactsController', 'edit', array('plugin' => 'contacts', 'project_id' => $project['id'], 'contacts_id' => $contacts_id)) ?>
         </li>
         <li>
             <i class="fa fa-trash-o" aria-hidden="true"></i>
-            <?= $this->url->link(t('Remove'), 'ContactsController', 'confirm', array('plugin' => 'contacts', 'project_id' => $project['id'], 'contacts_id' => $contacts_id), false, 'popover') ?>
+            <?= $this->modal->medium('', t('Remove'), 'ContactsController', 'confirm', array('plugin' => 'contacts', 'project_id' => $project['id'], 'contacts_id' => $contacts_id)) ?>
         </li>
     </ul>
 </div>

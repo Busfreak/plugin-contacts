@@ -24,7 +24,7 @@
         <td><?= $values[3]['value'] ?></td>
         <td>
             <?php if (count($values) > 3): ?>
-                <?= $this->url->link(t('additional'), 'ContactsController', 'details', array('plugin' => 'contacts','contacts_id' => $value['contacts_id']), false, 'popover') ?>
+                <?= $this->modal->medium('', t('additional'), 'ContactsController', 'details', array('plugin' => 'contacts','contacts_id' => $value['contacts_id'])) ?>
             <?php endif ?>
         </td>
     </tr>
